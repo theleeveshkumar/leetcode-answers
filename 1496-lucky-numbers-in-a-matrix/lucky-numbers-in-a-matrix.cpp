@@ -21,15 +21,13 @@ public:
             }
         }
     // for lucky number 
-        vector<int> result;
         for (int i = 0; i < rows; ++i) {
             for (int j = 0; j < cols; ++j) {
                 if (matrix[i][j] == rowMins[i] && matrix[i][j] == colMaxs[j]) {
-                    result.push_back(matrix[i][j]);
+                    return {matrix[i][j]};
                 }
             }
         }
-
-        return result;
+        return {};
     }
 };
